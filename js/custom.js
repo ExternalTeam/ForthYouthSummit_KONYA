@@ -108,11 +108,11 @@ $(document).ready(function () {
 	
 	// Countdown //
 	$('#countdown').countdown({
-		until: new Date(2014, 10 - 1, 9), // new Date(year, mth - 1, day, hr, min, sec) - date/time to count down to 
+		until: new Date(2016, 10 - 1, 20), // new Date(year, mth - 1, day, hr, min, sec) - date/time to count down to 
 		// or numeric for seconds offset, or string for unit offset(s): 
 		// 'Y' years, 'O' months, 'W' weeks, 'D' days, 'H' hours, 'M' minutes, 'S' seconds 
 		// until: '-1m +1d', for demo
-		timezone: -4, // The timezone (hours or minutes from GMT) for the target times, or null for client local 
+		timezone: +2, // The timezone (hours or minutes from GMT) for the target times, or null for client local 
 		layout: '{d<}<div class="span3"><div class="digit-container">{dn}<span class="label-container">{dl}</span></div></div>{d>}{h<}<div class="span3"><div class="digit-container">{hn}<span class="label-container">{hl}</span></div></div>{h>}{m<}<div class="span3"><div class="digit-container">{mn}<span class="label-container">{ml}</span></div></div>{m>}{s<}<div class="span3"><div class="digit-container">{sn}<span class="label-container">{sl}</span></div></div>{s>}',
 		timeSeparator: '', // Separator for time periods 
 		isRTL: false, // True for right-to-left languages, false for left-to-right 
@@ -130,8 +130,8 @@ $(document).ready(function () {
 		$('#countdown').addClass('hidden');
 		$('#register-button').addClass('hidden');
 		$('.register-title').addClass('hidden');
-		$('.register-box').append('<h2>We are at capacity and can no longer accept registrations.</h2>');
-		$('.register-box').append('<button class="btn btn-large btn-primary disabled" disabled="true" id="register-button">Sold Out</button>');
+		$('.register-box').append('<h2>Kapasitemizi aştık, ne yazık ki daha fazla kayıt alamıyoruz.</h2>');
+		$('.register-box').append('<button class="btn btn-large btn-primary disabled" disabled="true" id="register-button">Tükendi</button>');
 	}
 	
 	// Twitter Feed //
@@ -182,7 +182,7 @@ $(document).ready(function () {
 	
 	// Google Map //
 	$('#map_canvas').gmap({
-		'center': new google.maps.LatLng(40.77288, -73.98299), // Change this to your desired latitude and longitude
+		'center': new google.maps.LatLng(37.935086, 32.511182), // Change this to your desired latitude and longitude
 		'zoom': 17,
 		'mapTypeControl': false,
 		'navigationControl': false,
@@ -215,12 +215,12 @@ $(document).ready(function () {
 	$('#map_canvas').gmap().bind('init', function () {
 		$('#map_canvas').gmap('addMarker', {
 			'id': 'marker-1',
-			'position': '40.77288,-73.98299',
+			'position': '37.935086, 32.511182',
 			'bounds': false,
 			'icon': image
 		}).click(function () {
 			$('#map_canvas').gmap('openInfoWindow', {
-				'content': '<h4>Eventify</h4><p><strong>Downtown Conference Center</strong><br>Columbus Ave. New York, NY 10019 </p>'
+				'content': '<h4>IV. Ulusal Gençlik Zirvesi</h4><p><strong>Ramada Plaza Konya</strong><br>Horozluhan, Yeni İstanbul Cd. No:58, 42120 Selçuklu/Konya </p>'
 			}, this);
 		});
 	});
