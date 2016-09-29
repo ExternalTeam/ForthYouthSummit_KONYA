@@ -9,7 +9,7 @@
 /**/
 body {
 	margin: 0;
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
 	font-size: 15px;
 	line-height: 24px;
 	color: #393e46 !important;
@@ -31,7 +31,7 @@ a:hover {
 }
 h1, h2 {
 	color: inherit;
-	font-family: 'Roboto Slab Bold';
+	font-family: 'Roboto';
 	font-weight: bold;
 	line-height: 40px;
 	margin: 5px 0 20px;
@@ -394,11 +394,14 @@ nav select {
 	margin: 0 auto;
 	padding: 0;
 }
-#about, #register, #speakers, #schedule, #workshops, #venue, #sponsors, #news, #twitter-feed, #contact, #newsletter {
+#about, #register, #speakers, #schedule, #workshops, #venue, #sponsors, #news, #twitter-feed, #contact, #newsletter, #video {
 	padding: 100px 0 150px;
 	-webkit-box-shadow: 0 5px 0 rgba(30, 38, 44, 0.2) inset;
 	-moz-box-shadow: 0 5px 0 rgba(30, 38, 44, 0.2) inset;
 	box-shadow: 0 5px 0 rgba(30, 38, 44, 0.2) inset;
+}
+#video {
+	background: none repeat scroll 0 0 #5CA1A1;
 }
 #about {
 	background: none repeat scroll 0 0 #FFFFFF;
